@@ -1,0 +1,125 @@
+.footer {
+  background-color: #2e2f42;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: flex-start;
+}
+.footer-container {
+  display: flex;
+}
+.footer-main {
+  color: #f4f4fd;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  max-width: 264px;
+}
+.footer .logo {
+  color: #f4f4fd;
+}
+.footer-logo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1158px;
+  justify-content: flex-start;
+  margin-right: 120px;
+}
+.footer-social-container {
+  /* margin-right: 83px; */
+}
+.social-title {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.fototer-social-list {
+  display: flex;
+  gap: 16px;
+}
+.footer-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  fill: #f4f4fd;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-link:hover,
+.footer-link:focus {
+  background-color: #31d0aa;
+}
+.footer-subscribe-container {
+  display: block;
+  margin-left: auto;
+}
+.subscribe-content {
+  display: flex;
+  gap: 24px;
+}
+
+.form-user-email {
+  padding: 7px 16px;
+  background-color: transparent;
+  width: 264px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-user-email::placeholder {
+  color: inherit;
+}
+.form-user-email:hover,
+.form-user-email:focus,
+.form-user-email:focus-within {
+  border-color: #31d0aa;
+}
+/* .form-user-email:not(.form-user-email:placeholder-shown) { */
+
+.subscribe-btn {
+  background-color: #4d5ae5;
+  font-weight: 500;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.5;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: #31d0aa;
+}
+.subscribe-btn:active {
+  background-color: #31d0aa;
+}
+.subscribe-btn-icon {
+  fill: #ffffff;
+}
+
+.subscribe-title {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}

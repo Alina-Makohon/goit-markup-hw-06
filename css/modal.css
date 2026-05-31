@@ -1,0 +1,197 @@
+.modal-wraper {
+  position: fixed;
+  background-color: rgba(46, 47, 66, 0.4);
+  height: 100%;
+  width: 100%;
+  z-index: 99998;
+  left: 0;
+  top: 0;
+
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition:
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-wraper.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal-window {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  max-width: 408px;
+  /* height: 350px; */
+  padding: 72px 24px 24px 24px;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #fcfcfc;
+  box-shadow:
+    0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 4px;
+}
+.btn-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: block;
+  padding: 7px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 24px;
+  font-size: 0;
+  background-color: #e7e9fc;
+  fill: #2e2f42;
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-close:hover,
+.btn-close:focus {
+  border-color: #404bbf;
+  background-color: #404bbf;
+  fill: #ffffff;
+}
+.modal-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+.form-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.form-list-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.form-lable {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+.form-input {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding: 8px 16px 8px 38px;
+  width: 100%;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+.form-user-comment {
+  padding-left: 16px;
+  min-height: 120px;
+  resize: none;
+}
+
+.form-input::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.form-input-svg-wraper {
+  position: relative;
+}
+.form-input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:hover,
+.form-input:focus {
+  border-color: #4d5ae5;
+}
+.form-input:hover + .form-input-icon,
+.form-input:focus + .form-input-icon {
+  fill: #4d5ae5;
+}
+
+.form-check-policy {
+  margin-bottom: 24px;
+  display: flex;
+}
+.label-checkbox-policy {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.checkbox-icon-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  cursor: pointer;
+  fill: transparent;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-content {
+  color: #8e8f99;
+  letter-spacing: 0.04em;
+  line-height: 1.17;
+  font-weight: 400;
+  font-size: 12px;
+}
+.link-policy {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+}
+
+.modal-form-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 16px;
+  min-width: 169px;
+  cursor: pointer;
+  background-color: #4d5ae5;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  color: #fff;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  background-color: #404bbf;
+}
+.modal-form-btn:active {
+  background-color: #404bbf;
+}
+.form-checkbox:focus + .label-checkbox-policy > .checkbox-icon-block {
+  border-color: #404bbf;
+}
+
+.form-checkbox:checked + .label-checkbox-policy > .checkbox-icon-block {
+  background-color: #404bbf;
+  fill: #f4f4fd;
+}
