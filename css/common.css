@@ -48,10 +48,10 @@ a {
   color: #4d5ae5;
 }
 .container {
-  width: 1158px;
+  max-width: 320px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 .sr-only {
   position: absolute;
@@ -66,9 +66,25 @@ a {
   margin: -1px;
 }
 section {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 input,
 textarea {
   outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  section {
+    padding: 120px 0;
+  }
 }
