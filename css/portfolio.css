@@ -1,3 +1,4 @@
+/* #region mobile */
 .portfolio-title {
   color: #2e2f42;
   margin-bottom: 72px;
@@ -67,6 +68,9 @@
 .product-list:hover .owerlay-text {
   transform: translateY(0);
 }
+
+/* #endregion mobile */
+/* #region tablet */
 @media screen and (min-width: 768px) {
   .portfolio-list {
     flex-direction: row;
@@ -76,15 +80,28 @@
     max-width: 736px;
   }
   .product-list {
+    max-width: 356px;
     flex-basis: calc((100% - 24px) / 2);
   }
+  .product-photo-content {
+    width: 356px;
+    height: 296px;
+  }
 }
+/* #endregion tablet */
+/* #region deskop */
 @media screen and (min-width: 1158px) {
   .portfolio-list {
     row-gap: 48px;
     max-width: 1128px;
   }
   .product-list {
+    max-width: 360px;
     flex-basis: calc((100% - 48px) / 3);
   }
+  .product-photo-content {
+    width: 360px;
+    height: 300px;
+  }
 }
+/* #endregion deskop */

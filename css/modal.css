@@ -24,9 +24,9 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  max-width: 408px;
-  /* height: 350px; */
-  padding: 72px 24px 24px 24px;
+  max-width: 288px;
+  min-width: 288px;
+  padding: 72px 16px 16px 24px;
   transform: translateX(-50%) translateY(-50%);
   background-color: #fcfcfc;
   box-shadow:
@@ -194,4 +194,10 @@
 .form-checkbox:checked + .label-checkbox-policy > .checkbox-icon-block {
   background-color: #404bbf;
   fill: #f4f4fd;
+}
+@media screen and (min-width: 768px) {
+  .modal-window {
+    max-width: 408px;
+    padding: 72px 24px 24px 24px;
+  }
 }
