@@ -1,9 +1,35 @@
 .header {
   border-bottom: 1px solid #e7e9fc;
 }
+.header .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 16px;
+}
 .header .logo {
+  display: block;
+  padding: 16px 0;
   color: #2e2f42;
-  margin-right: 76px;
+}
+.burger-menu-btn {
+  display: block;
+  border: none;
+  background-color: transparent;
+  padding: 16px 0;
+  fill: #2e2f42;
+  margin-left: auto;
+}
+.header-nav {
+  display: none;
+  flex-grow: 1;
+}
+.menu-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 40px;
+  align-items: center;
 }
 .nav-list {
   position: relative;
@@ -35,13 +61,23 @@
   position: absolute;
   bottom: 0;
 }
+.header-contacts {
+  display: none;
+}
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
 .contact a {
   display: block;
   color: inherit;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   font-style: normal;
-  padding-top: 24px;
-  padding-bottom: 24px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact a:hover,
@@ -49,24 +85,42 @@
   color: #404bbf;
 }
 
-.header .container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0 15px;
+@media screen and (min-width: 768px) {
+  .header .logo {
+    padding: 24px 0;
+    margin-right: 120px;
+  }
+  .header-nav {
+    display: block;
+  }
+
+  .header-contacts {
+    display: block;
+  }
+
+  .burger-menu-btn {
+    display: none;
+  }
 }
-.header-nav {
-  flex-grow: 1;
-}
-.menu-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 40px;
-  align-items: center;
-}
-.contact-list {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
+@media screen and (min-width: 1158px) {
+  .header .container {
+    padding: 0 15px;
+  }
+  .header .logo {
+    margin-right: 76px;
+  }
+  .contact-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .contact a {
+    line-height: 1.5;
+    font-size: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    letter-spacing: 0.02em;
+  }
 }
