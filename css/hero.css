@@ -106,7 +106,7 @@
         rgba(46, 47, 66, 0.7) 0%,
         rgba(46, 47, 66, 0.7) 100%
       ),
-      url(../images/hero-bg-lp@2x.jpg);
+      url(../images/hero-bg-t@2x.jpg);
   }
 }
 @media screen and (min-width: 1158px) {
@@ -138,6 +138,6 @@
         rgba(46, 47, 66, 0.7) 0%,
         rgba(46, 47, 66, 0.7) 100%
       ),
-      url(../images/hero-bg-t@2x.jpg);
+      url(../images/hero-bg-lp@2x.jpg);
   }
 }
